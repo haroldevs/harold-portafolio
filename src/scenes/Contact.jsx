@@ -64,13 +64,7 @@ const Contact = () => {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <form
-            target="_blank"
-            onSubmit={onSubmit}
-            name="formulario"
-            method="POST"
-            netlify
-          >
+          <form onSubmit={onSubmit} name="contact" method="POST" netlify>
             <input
               className="w-full bg-blue font-semibold placeholder-opaque-black p-3"
               type="text"
