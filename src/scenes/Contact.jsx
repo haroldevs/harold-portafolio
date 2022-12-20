@@ -67,8 +67,9 @@ const Contact = () => {
           <form
             target="_blank"
             onSubmit={onSubmit}
-            action="https://formsubmit.co/haroldthomasg18@gmail.com"
+            name="formulario"
             method="POST"
+            netlify
           >
             <input
               className="w-full bg-blue font-semibold placeholder-opaque-black p-3"
