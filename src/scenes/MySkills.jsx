@@ -7,7 +7,7 @@ const MySkills = () => {
   return (
     <section id="skills" className="pt-10 pb-24 ">
       {/* header & image section */}
-      <div className="md:flex md:justify-between md:gap-16 mt-32">
+      <div className="md:flex md:justify-between md:gap-16 mt-20">
         <motion.div
           className="md:w-1/3"
           initial="hidden"
@@ -31,7 +31,7 @@ const MySkills = () => {
         <div className="mt-16 md:mt-0">
           {isScreens ? (
             <div
-              className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10 
+              className="relative z-0 ml-20 before:absolute before:-top-6 before:-left-10 
               before:w-full before:h-full before:border-2 before:border-blue before:z-[-1]"
             >
               <img
@@ -46,7 +46,7 @@ const MySkills = () => {
         </div>
       </div>
       {/* skills */}
-      <div className="md:flex md:justify-between mt-16 gap-32 ">
+      <div className="md:flex md:justify-between  gap-32 ">
         {/* experience */}
         <motion.div
           className="md:w-1/3 mt-10"
@@ -59,14 +59,14 @@ const MySkills = () => {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <div className="relative h-32">
+          <div className="relative h-28">
             <div className="z-10">
               <p className="font-semibold text-5xl">01</p>
               <p className="font-semibold text-3xl mt-3">Experience</p>
             </div>
-            <div className="w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]" />
+            <div className="w-1/2 md:w-3/4 h-24 bg-blue absolute right-0 top-0 z-[-1]" />
           </div>
-          <p className="mt-5">
+          <p className="mt-1">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
             rem totam eos molestias,
           </p>
@@ -84,14 +84,14 @@ const MySkills = () => {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <div className="relative h-32">
+          <div className="relative h-28">
             <div className="z-10">
               <p className="font-semibold text-5xl">02</p>
-              <p className="font-semibold text-3xl mt-3">Innovatative</p>
+              <p className="font-semibold text-3xl mt-3">Innovative</p>
             </div>
-            <div className="w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1]" />
+            <div className="w-1/2 md:w-3/4 h-24 bg-red absolute right-0 top-0 z-[-1]" />
           </div>
-          <p className="mt-5">
+          <p className="mt-1">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
             rem totam eos molestias,
           </p>
@@ -109,14 +109,14 @@ const MySkills = () => {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <div className="relative h-32">
+          <div className="relative h-28">
             <div className="z-10">
               <p className="font-semibold text-5xl">03</p>
               <p className="font-semibold text-3xl mt-3">Imaginative</p>
             </div>
-            <div className="w-1/2 md:w-3/4 h-32 bg-yellow absolute right-0 top-0 z-[-1]" />
+            <div className="w-1/2 md:w-3/4 h-24 bg-yellow absolute right-0 top-0 z-[-1]" />
           </div>
-          <p className="mt-5">
+          <p className="mt-1">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
             rem totam eos molestias,
           </p>

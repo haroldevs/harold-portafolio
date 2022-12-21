@@ -8,6 +8,7 @@ import MySkills from "./scenes/MySkills";
 import Projects from "./scenes/Projects";
 import Contact from "./scenes/Contact";
 import Footer from "./scenes/Footer";
+import Aboutme from "./scenes/Aboutme";
 function App() {
   const [pageselected, setpageselected] = useState("home");
   const [isTopOfPage, setisTopOfPage] = useState(true);
@@ -29,7 +30,7 @@ function App() {
         pageselected={pageselected}
         setpageselected={setpageselected}
       />
-      <div className="w-full px-16 mx-auto md:h-full bg-gradient-to-b from-black via-black to-gray-800  ">
+      <div className="w-full px-16 mx-auto md:h-full bg-gradient-to-t from-black via-black to-gray-800  ">
         {isScreens && (
           <DotGroup
             pageselected={pageselected}
@@ -40,6 +41,10 @@ function App() {
       </div>
       <LinearGradient />
       <div className="w-full px-16 mx-auto md:h-full bg-gradient-to-b from-black via-black to-gray-800 ">
+        <Aboutme />
+      </div>
+      <LinearGradient />
+      <div className="w-full px-16 mx-auto md:h-full bg-gradient-to-t from-black via-black to-gray-800 ">
         <MySkills />
       </div>
       <LinearGradient />
@@ -47,9 +52,10 @@ function App() {
         <Projects />
       </div>
       <LinearGradient />
-      <div className="w-full px-16 mx-auto bg-gradient-to-b from-black via-black to-gray-800">
+      <div className="w-full px-16 mx-auto bg-gradient-to-t from-black via-black to-gray-800">
         <Contact />
       </div>
+      <LinearGradient />
       <Footer />
     </h1>
   );

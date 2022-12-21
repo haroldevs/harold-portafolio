@@ -11,6 +11,14 @@ const DotGoup = ({ pageselected, setpageselected }) => {
       />
       <AnchorLink
         className={`${
+          pageselected === "aboutme" ? selectedStyles : "bg-dark-grey"
+        }
+         w-3 h-3 rounded-full`}
+        href={"#aboutme"}
+        onClick={() => setpageselected("aboutme")}
+      />
+      <AnchorLink
+        className={`${
           pageselected === "skills" ? selectedStyles : "bg-dark-grey"
         }
          w-3 h-3 rounded-full`}
