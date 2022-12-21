@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const MySkills = () => {
   const isScreens = useMediaQuery("(min-width:1060px)");
   return (
-    <section id="skills" className="pt-10 pb-24">
+    <section id="skills" className="pt-10 pb-24 ">
       {/* header & image section */}
       <div className="md:flex md:justify-between md:gap-16 mt-32">
         <motion.div

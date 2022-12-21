@@ -49,7 +49,7 @@ const Landing = ({ setpageselected }) => {
           <p className="text-5xl  z-10 text-center md:text-start">
             Harold {""}
             <span
-              className="xs:relative xs:text-deep-blue xs:font-semibold z-20 xs:before:content-brush
+              className="xs:relative xs:text-red xs:font-semibold z-20 
               before:absolute before:-left-[36px] before:-top-[70px] before:z-[-1] ml-1 "
             >
               Galdo
@@ -75,7 +75,7 @@ const Landing = ({ setpageselected }) => {
           }}
         >
           <AnchorLink
-            className="bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500"
+            className="bg-gradient-rainblue text-black rounded-sm py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500"
             onClick={() => setpageselected("contact")}
             href="#contact"
           >
@@ -86,7 +86,7 @@ const Landing = ({ setpageselected }) => {
             onClick={() => setpageselected("contact")}
             href="#contact"
           >
-            <div className="bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center px-10">
+            <div className="bg-black hover:text-red transition duration-500 w-full h-full flex items-center justify-center px-10">
               Let's talk.
             </div>
           </AnchorLink>

@@ -20,7 +20,7 @@ module.exports = {
         "gradient-rainbow":
           "linear-gradient(81.66deg,#00B5EE 7.21%,#FF45A4 45.05%, #FFBA00 78.07%)",
         "gradient-rainblue":
-          "linear-gradient(90deg,#23CBFF 14.53%,#FC59FF 69.36%, #FFBD0C 117.07%)",
+          "linear-gradient(90deg, rgba(26,26,28,1) 0%, rgba(165,169,175,1) 47%, rgba(26,26,28,1) 100%)",
       }),
       fontFamily: {
         sans: ["Poppins", ...defaultTheme.fontFamily.sans],
@@ -28,6 +28,9 @@ module.exports = {
       content: {
         brush: "url('./assets/brush.png')",
       },
+    },
+    fontFamily: {
+      nameofharold: ["Fredericka the Great"],
     },
     screens: {
       xs: "480px",

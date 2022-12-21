@@ -23,13 +23,13 @@ function App() {
   }, []);
 
   return (
-    <h1 className="app bg-deep-blue">
+    <h1 className="app bg-gradient-to-b from-black via-black to-gray-800">
       <Navbar
         isTopOfPage={isTopOfPage}
         pageselected={pageselected}
         setpageselected={setpageselected}
       />
-      <div className="w-5/6 mx-auto md:h-full">
+      <div className="w-5/6 mx-auto md:h-full ">
         {isScreens && (
           <DotGroup
             pageselected={pageselected}
@@ -39,15 +39,15 @@ function App() {
         <Landing setpageselected={setpageselected} />
       </div>
       <LinearGradient />
-      <div className="w-5/6 mx-auto md:h-full mb-16">
+      <div className="w-full px-16 mx-auto md:h-full bg-gradient-to-b from-black via-black to-gray-800 ">
         <MySkills />
       </div>
       <LinearGradient />
-      <div className="w-5/6 mx-auto">
+      <div className="w-full mx-auto bg-gradient-to-b from-black via-black to-gray-800 ">
         <Projects />
       </div>
       <LinearGradient />
-      <div className="w-5/6 mx-auto">
+      <div className="w-full px-16 mx-auto bg-gradient-to-b from-black via-black to-gray-800">
         <Contact />
       </div>
       <Footer />

@@ -31,7 +31,7 @@ const Contact = () => {
       >
         <div>
           <p className="font-playfair font-semibold text-4xl">
-            <span className="text-yellow">CONTACT ME</span> TO GET STARTED
+            <span className="text-red">CONTACT ME</span> TO GET STARTED
           </p>
           <div className="flex md:justify-end my-5">
             <LinearGradient width="w-1/2" />
@@ -71,7 +71,7 @@ const Contact = () => {
             method="POST"
           >
             <input
-              className="w-full bg-blue font-semibold placeholder-opaque-black p-3"
+              className="w-full bg-gray-600 font-semibold placeholder-opaque-black p-3"
               type="text"
               placeholder="YOUR NAME"
               {...register("name", {
@@ -87,7 +87,7 @@ const Contact = () => {
             )}
 
             <input
-              className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5"
+              className="w-full bg-gray-600 font-semibold placeholder-opaque-black p-3 mt-5"
               type="text"
               placeholder="YOUR EMAIL"
               {...register("email", {
@@ -103,7 +103,7 @@ const Contact = () => {
             )}
 
             <textarea
-              className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5"
+              className="w-full bg-gray-600 font-semibold placeholder-opaque-black p-3 mt-5"
               type="text"
               placeholder="THE MESSAGE"
               rows="4"
@@ -122,7 +122,7 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="p-5 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-red hover:text-white transition duration-500"
+              className="p-5 bg-red font-semibold text-black mt-5 hover:bg-red hover:text-white transition duration-500"
             >
               SEND ME A MESSAGE
             </button>

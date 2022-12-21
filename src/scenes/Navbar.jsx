@@ -6,8 +6,8 @@ const Link = ({ page, pageselected, setpageselected }) => {
   const lowerCasePage = page.toLowerCase();
   return (
     <AnchorLink
-      className={`${pageselected === lowerCasePage ? "text-yellow" : ""}
-         hover:text-yellow transition duration-500`}
+      className={`${pageselected === lowerCasePage ? "text-red" : ""}
+         hover:text-red transition duration-500`}
       href={`#${lowerCasePage}`}
       onClick={() => setpageselected(lowerCasePage)}
     >
@@ -19,12 +19,12 @@ const Link = ({ page, pageselected, setpageselected }) => {
 const Navbar = ({ isTopOfPage, pageselected, setpageselected }) => {
   const [isMenuToggled, setisMenuToggled] = useState(false);
   const isScreens = useMediaQuery("(min-width:768px)");
-  const navbarBackground = isTopOfPage ? "" : "bg-red";
+  const navbarBackground = isTopOfPage ? "" : "bg-black";
 
   return (
     <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
-        <h4 className="sans text-3xl font-bold">HAROLDEVS</h4>
+        <h4 className="sans text-3xl font-bold font-nameofharold">HAROLDEVS</h4>
         {/* DESKTOP NAV */}
         {isScreens ? (
           <div className="flex justify-between gap-16 sans text-sm font-semibold">
