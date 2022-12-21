@@ -29,7 +29,7 @@ function App() {
         pageselected={pageselected}
         setpageselected={setpageselected}
       />
-      <div className="w-5/6 mx-auto md:h-full ">
+      <div className="w-full px-16 mx-auto md:h-full bg-gradient-to-b from-black via-black to-gray-800  ">
         {isScreens && (
           <DotGroup
             pageselected={pageselected}
