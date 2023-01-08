@@ -5,12 +5,14 @@ import navbar from "../assets/portafolio/arrayDestruct.jpg";
 import reactParallax from "../assets/portafolio/reactParallax.jpg";
 import reactSmooth from "../assets/portafolio/reactSmooth.jpg";
 import reactWeather from "../assets/portafolio/reactWeather.jpg";
-
+import delupeimg from "../assets/portafolio/delupeimg.jpg";
 const Projects = () => {
   const project = [
     {
       id: 1,
-      src: arrayDestruct,
+      src: delupeimg,
+      lnk: "https://www.youtube.com/watch?v=NZpmGftWXcE",
+      cde: "https://github.com/haroldevs/demos/blob/main/README.md",
     },
     {
       id: 2,
@@ -44,7 +46,7 @@ const Projects = () => {
         </div>
 
         <div className="grid sm:gridcols-2 md:grid-cols-3 gap-8 px-12 sm:px-20">
-          {project.map(({ id, src }) => (
+          {project.map(({ id, src, lnk, cde }) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
               <img
                 src={src}
@@ -53,10 +55,14 @@ const Projects = () => {
               />
               <div className="flex items-center justify-center">
                 <button className="w-1/2 px-4 py-2 m-4 duration-200 hover:scale-105">
-                  Demo
+                  <a href={lnk} target="_blank" rel="noreferrer">
+                    Demo
+                  </a>
                 </button>
                 <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
-                  Code
+                  <a href={cde} target="_blank" rel="noreferrer">
+                    Code
+                  </a>
                 </button>
               </div>
             </div>
