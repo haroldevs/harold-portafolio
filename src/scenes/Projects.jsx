@@ -1,5 +1,4 @@
 import React from "react";
-import arrayDestruct from "../assets/portafolio/arrayDestruct.jpg";
 import installNode from "../assets/portafolio/installNode.jpg";
 import navbar from "../assets/portafolio/arrayDestruct.jpg";
 import reactParallax from "../assets/portafolio/reactParallax.jpg";
