@@ -47,11 +47,10 @@ function App() {
       <div className="w-full px-16 mx-auto md:h-full bg-gradient-to-t from-black via-black to-gray-800 ">
         <MySkills />
       </div>
-      <LinearGradient />
       <div className="w-full mx-auto bg-gradient-to-b from-black via-black to-gray-800 ">
         <Projects />
       </div>
-      <LinearGradient className=" " />
+
       <div className="w-full px-16 mx-auto bg-gradient-to-t from-black via-black to-gray-800 pt-48">
         <Contact />
       </div>

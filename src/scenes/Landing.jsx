@@ -56,10 +56,12 @@ const Landing = ({ setpageselected }) => {
             </span>
           </p>
           <p className="mt-10 mb-7 text-sm text-center md:text-start">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita
-            qui vitae ipsam odit quidem corporis, placeat quae vero eius aut
-            illum molestias neque doloremque eos enim laborum consectetur
-            recusandae saepe.
+            Ingeniero de Sistemas con experiencia en Soporte TI y consolidando
+            conocimientos de programación. Certificado con: <br />
+            <strong>
+              CCNA 1 y 2 | Devops y Cloud Computing en Platzi | AZ-900 by
+              Microsoft | Desarrollador Full-Stack por Tecsup
+            </strong>
           </p>
         </motion.div>
         {/* call to actions */}

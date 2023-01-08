@@ -24,8 +24,7 @@ const MySkills = () => {
           </p>
           <LinearGradient width="w-1/3" />
           <p className="mt-10 mb-7">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-            tempore dignissimos ad
+            Mis 3 principales habilidades que sobresalen ante otras son:
           </p>
         </motion.div>
         <div className="mt-16 md:mt-0">
@@ -62,13 +61,13 @@ const MySkills = () => {
           <div className="relative h-28">
             <div className="z-10">
               <p className="font-semibold text-5xl">01</p>
-              <p className="font-semibold text-3xl mt-3">Experience</p>
+              <p className="font-semibold text-3xl mt-3">Experiencia</p>
             </div>
             <div className="w-1/2 md:w-3/4 h-24 bg-blue absolute right-0 top-0 z-[-1]" />
           </div>
           <p className="mt-1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-            rem totam eos molestias,
+            De cada trabajo he sacado el máximo provecho y se lo que hay que
+            hacer para implementarlo o solucionarlo.
           </p>
         </motion.div>
 
@@ -87,13 +86,14 @@ const MySkills = () => {
           <div className="relative h-28">
             <div className="z-10">
               <p className="font-semibold text-5xl">02</p>
-              <p className="font-semibold text-3xl mt-3">Innovative</p>
+              <p className="font-semibold text-3xl mt-3">Innovador</p>
             </div>
             <div className="w-1/2 md:w-3/4 h-24 bg-red absolute right-0 top-0 z-[-1]" />
           </div>
           <p className="mt-1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-            rem totam eos molestias,
+            Me gusta siempre implementar algo nuevo acerca del mundo de los
+            sistemas, aunque no lo pidan. Y si no conozco del tema entonces me
+            capacito.
           </p>
         </motion.div>
 
@@ -112,13 +112,14 @@ const MySkills = () => {
           <div className="relative h-28">
             <div className="z-10">
               <p className="font-semibold text-5xl">03</p>
-              <p className="font-semibold text-3xl mt-3">Imaginative</p>
+              <p className="font-semibold text-3xl mt-3">Resiliente</p>
             </div>
             <div className="w-1/2 md:w-3/4 h-24 bg-yellow absolute right-0 top-0 z-[-1]" />
           </div>
           <p className="mt-1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-            rem totam eos molestias,
+            Aprendí de grandes personas como debo afrontar incidentes para
+            solucionarlos y fortalecer la seguridad desde la gestión hasta la
+            implementación
           </p>
         </motion.div>
       </div>

@@ -37,11 +37,11 @@ const Projects = () => {
   return (
     <div id="projects" className="pt-48 pb-48 md:h-screen ">
       <div className="max-w-screen-lg p-4  mx-auto flex flex-col justify-center w-full ">
-        <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
-            Projects
+        <div className="pb-8 text-center">
+          <p className="text-4xl font-bold inline border-b-4 border-gray-500 ">
+            Pro<span className="text-red">jects</span>
           </p>
-          <p className="py-2">Check out some of my work right here</p>
+          <p className="py-2">Te invito a que veas mis proyectos</p>
         </div>
 
         <div className="grid sm:gridcols-2 md:grid-cols-3 gap-8 px-12 sm:px-20">

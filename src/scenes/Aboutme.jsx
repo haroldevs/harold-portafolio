@@ -41,20 +41,20 @@ const Aboutme = () => {
             About <span className="text-red">Me</span>
           </p>
           <p className="mt-6 pb-10">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe aut,
-            aliquam et iusto voluptates possimus, nihil est cumque ab reiciendis
-            dolorem obcaecati officiis blanditiis minus nemo quis voluptatem
-            harum magnam. Dolores ipsa, eveniet nam expedita rerum aliquid quo
-            consequuntur architecto facere facilis tempore unde fugiat
-            voluptatibus quos dolore corporis doloribus doloremque nostrum quam
-            magnam libero commodi at? Aperiam, repellendus labore. Reprehenderit
-            in rem incidunt similique quod sint, repellendus dignissimos. Ea
-            quas aliquid natus, porro odit recusandae iusto inventore aut magni
-            dicta consequuntur, id animi reprehenderit consequatur repellendus,
-            illo ullam amet! Nihil quas velit debitis asperiores repellendus
-            earum ad, tenetur recusandae. Deserunt incidunt amet sunt in dicta,
-            unde numquam praesentium voluptatem maxime voluptate odio minima,
-            perferendis quae molestias asperiores ipsam illum. Cumque
+            Soy un <strong>Ingeniero de Sistemas</strong> apasionado del mundo
+            de las tecnologías de la información, desde el año del 2019 empecé
+            con Cableado Estructurado para Lan Centers, en el año 2021 seguí con
+            SOPORTE TI para una Municipalidad distrital y Contact Center, desde
+            el año 2022 inicié en el hermoso de la programación tanto en el
+            desarrollo frontend con ReactJS y backend con Django y también en el
+            despliegue de soluciones de tecnologías de información utilizando
+            AWS y AZURE.
+            <br />
+            De cada experiencia laboral que he tenido tengo los mejores
+            recuerdos, vivencias y aventuras de mi vida profesional porque ante
+            eventos de incidentes o problemas, he podido solucionarlo y obtener
+            la gratitud de compañeros, jefes y clientes aplicando tanto ética
+            profesional y moral como persona.
           </p>
         </motion.div>
       </div>

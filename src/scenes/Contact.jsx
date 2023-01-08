@@ -51,7 +51,11 @@ const Contact = () => {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <img src="../assets/contact-image.jpeg" alt="contact" />
+          <img
+            src="../assets/image-contact.jpg"
+            alt="contact"
+            style={{ borderRadius: 12 }}
+          />
         </motion.div>
 
         <motion.div
