@@ -1,37 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
+import styled from "styled-components";
 import installNode from "../assets/portafolio/installNode.jpg";
 import navbar from "../assets/portafolio/arrayDestruct.jpg";
 import reactParallax from "../assets/portafolio/reactParallax.jpg";
 import reactSmooth from "../assets/portafolio/reactSmooth.jpg";
 import reactWeather from "../assets/portafolio/reactWeather.jpg";
 import delupeimg from "../assets/portafolio/delupeimg.jpg";
+import ModalProjects from "../components/ModalProjects";
+import imgReact from "../assets/herramientas/react.webp";
+import imgSemantic from "../assets/herramientas/semantic.webp";
+import imgFormik from "../assets/herramientas/formik.webp";
+import imgSass from "../assets/herramientas/sass.webp";
+import imgDjango from "../assets/herramientas/django.webp";
+import imgRailway from "../assets/herramientas/railway.webp";
+import imgVercel from "../assets/herramientas/vercel.webp";
+
 const Projects = () => {
+  const [estadoModal1, setestadoModal1] = useState(false);
+  const [estadoModal2, setestadoModal2] = useState(false);
   const project = [
     {
       id: 1,
       src: delupeimg,
       lnk: "https://www.youtube.com/watch?v=NZpmGftWXcE",
       cde: "https://github.com/haroldevs/demos/blob/main/README.md",
+      alte: "proyecto de lupe",
+      themodal: () => setestadoModal1(!estadoModal1),
     },
     {
       id: 2,
       src: installNode,
+      alte: "proyecto construyendose",
+      themodal: () => setestadoModal2(!estadoModal2),
     },
     {
       id: 3,
       src: navbar,
+      alte: "proyecto construyendose",
+      themodal: () => setestadoModal2(!estadoModal2),
     },
     {
       id: 4,
       src: reactParallax,
+      alte: "proyecto construyendose",
+      themodal: () => setestadoModal2(!estadoModal2),
     },
     {
       id: 5,
       src: reactSmooth,
+      alte: "proyecto construyendose",
+      themodal: () => setestadoModal2(!estadoModal2),
     },
     {
       id: 6,
       src: reactWeather,
+      alte: "proyecto construyendose",
+      themodal: () => setestadoModal2(!estadoModal2),
     },
   ];
   return (
@@ -45,12 +69,13 @@ const Projects = () => {
         </div>
 
         <div className="grid sm:gridcols-2 md:grid-cols-3 gap-8 px-12 sm:px-20">
-          {project.map(({ id, src, lnk, cde }) => (
+          {project.map(({ id, src, lnk, cde, alte, themodal }) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
               <img
                 src={src}
-                alt=""
+                alt={alte}
                 className="rounded-md duration-200 hover:scale-105"
+                onClick={themodal}
               />
               <div className="flex items-center justify-center">
                 <button className="w-1/2 px-4 py-2 m-4 duration-200 hover:scale-105">
@@ -68,8 +93,154 @@ const Projects = () => {
           ))}
         </div>
       </div>
+      {/* todos mis modales */}
+      {/* modal del proyecto 1 */}
+      <ModalProjects
+        estado={estadoModal1}
+        cambiarEstado={setestadoModal1}
+        titulo={"Proyecto deLupe "}
+        mostrarOverlay={true}
+        posicionModal={"center"}
+      >
+        <Contenido>
+          <p>Proyecto hecho con ReactJS + Django REST framework</p>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+              gap: "2rem",
+            }}
+          >
+            <div>
+              <TitleInfo>Front-End</TitleInfo>
+              <ul>
+                <li>
+                  <CuadroInfo>
+                    <img src={imgReact} alt="React"></img>ReactJS
+                  </CuadroInfo>
+                </li>
+                <li>
+                  <CuadroInfo>
+                    <img src={imgSemantic} alt="Semantic UI React"></img>
+                    SemanticUI
+                  </CuadroInfo>
+                </li>
+                <li>
+                  <CuadroInfo>
+                    <img src={imgFormik} alt="Formik"></img>
+                    Formik
+                  </CuadroInfo>
+                </li>
+                <li>
+                  <CuadroInfo>
+                    <img src={imgSass} alt="Sass"></img>
+                    Sass
+                  </CuadroInfo>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <TitleInfo>Back-End</TitleInfo>
+              <ul>
+                <li>
+                  <CuadroInfo>
+                    <img src={imgDjango} alt="Django REST"></img>
+                    Django REST
+                  </CuadroInfo>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <TitleInfo style={{ marginTop: "1rem" }}>Deploy</TitleInfo>
+            <ul>
+              <li style={{ marginBottom: ".6rem" }}>
+                <CuadroInfo>
+                  <img src={imgRailway} alt="Railway"></img>
+                  Railway
+                </CuadroInfo>
+              </li>
+              <li>
+                <CuadroInfo>
+                  <img src={imgVercel} alt="Vercel"></img>
+                  Vercel
+                </CuadroInfo>
+              </li>
+            </ul>
+          </div>
+          <Boton onClick={() => setestadoModal1(!estadoModal1)}>Volver</Boton>
+        </Contenido>
+      </ModalProjects>
+      {/* modal del proyecto 2 */}
+      <ModalProjects
+        estado={estadoModal2}
+        cambiarEstado={setestadoModal2}
+        titulo={"Proyecto Construyendose "}
+        mostrarOverlay={true}
+        posicionModal={"start"}
+      >
+        <Contenido>
+          <p>Proyecto en construcción 👷 💻 💪 </p>
+          <Boton onClick={() => setestadoModal2(!estadoModal2)}>Volver</Boton>
+        </Contenido>
+      </ModalProjects>
     </div>
   );
 };
 
 export default Projects;
+
+const Contenido = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  img {
+    width: 100%;
+    vertical-align: top;
+    border-radius: 3px;
+  }
+`;
+const Boton = styled.button`
+  display: block;
+  margin-top: 1.7rem;
+  padding: 10px 30px;
+  border-radius: 100px;
+  color: #fff;
+  border: none;
+  background: red;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  transition: 0.3s ease all;
+  &:hover {
+    background: #670f22;
+  }
+`;
+
+const CuadroInfo = styled.div`
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.6rem;
+  align-items: center;
+
+  img {
+    max-width: 20px;
+  }
+`;
+
+const TitleInfo = styled.h5`
+  display: flex;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+`;
