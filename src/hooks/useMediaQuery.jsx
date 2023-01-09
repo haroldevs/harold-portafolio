@@ -11,7 +11,8 @@ const useMediaQuery = (query) => {
     const listener = () => setmatches(media.matches);
     window.addEventListener("resize", listener);
     return () => window.removeEventListener("resize", listener);
-  }, [query]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [matches, query]);
 
   return matches;
 };
