@@ -6,13 +6,12 @@ const useMediaQuery = (query) => {
   useEffect(() => {
     const media = window.matchMedia(query);
     if (media.matches !== matches) {
-      setmatches(media);
+      setmatches((prevMatches) => media.matches);
     }
-    const listener = () => setmatches(media.matches);
+    const listener = () => setmatches((prevMatches) => media.matches);
     window.addEventListener("resize", listener);
     return () => window.removeEventListener("resize", listener);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [matches, query]);
+  }, [query]);
 
   return matches;
 };

@@ -14,12 +14,9 @@ const Landing = ({ setpageselected }) => {
       {/* image section */}
       <div className="basis-3/5 z-10 mt-16 md:mt-32 flex justify-center md:order-2">
         {isScreens ? (
-          <div
-            className="relative z-0 ml-20 before:absolute before:-top-20 before:-left-20 before:rounded-[400px]
-          before:w-full before:max-w-[400px] md:before:max-w-[600px] before:h-full before:border-2 before:border-blue before:z-[-1]"
-          >
+          <div className="relative z-0 ml-5 before:absolute before:-top-20 before:-left-10 before:rounded-[400px] before:w-full before:max-w-[400px] md:before:max-w-[600px] before:h-full before:border-2 before:border-gray-700 before:z-[-1]">
             <img
-              className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px] rounded-full"
+              className="hover:filter hover:saturate-100 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[400px]  rounded-full"
               alt="profile"
               src="assets/profile-image.webp"
             />
@@ -55,13 +52,13 @@ const Landing = ({ setpageselected }) => {
               Galdo
             </span>
           </p>
-          <p className="mt-10 mb-7 text-sm text-center md:text-start">
-            Ingeniero de Sistemas con experiencia en Soporte TI y consolidando
-            conocimientos de programación. Certificado con: <br />
-            <strong>
-              CCNA 1 y 2 | Devops y Cloud Computing en Platzi | AZ-900 by
-              Microsoft | Desarrollador Full-Stack por Tecsup
-            </strong>
+          <p className="mt-10 mb-1 text-sm text-center md:text-start">
+            Ingeniero de Sistemas con experiencia en Soporte TI y Desarrollador
+            Web Full Stack. Certificado con:
+          </p>
+          <p className="text-gray-400 ">
+            CCNA 1 y 2 by Cisco | Devops y Cloud Computing en Platzi | AZ-900 by
+            Microsoft | Desarrollador Full-Stack por Tecsup
           </p>
         </motion.div>
         {/* call to actions */}
@@ -77,7 +74,7 @@ const Landing = ({ setpageselected }) => {
           }}
         >
           <AnchorLink
-            className="bg-gradient-rainblue text-black rounded-sm py-3 px-7 font-semibold hover:bg-blue hover:text-red transition duration-500"
+            className="bg-gradient-rainblue text-black rounded-sm py-3 px-7 font-semibold hover:text-red transition duration-500"
             onClick={() => setpageselected("contact")}
             href="#contact"
           >

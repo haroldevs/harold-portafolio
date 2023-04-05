@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import installNode from "../assets/portafolio/installNode.jpg";
 import navbar from "../assets/portafolio/arrayDestruct.jpg";
 import reactParallax from "../assets/portafolio/reactParallax.jpg";
 import reactSmooth from "../assets/portafolio/reactSmooth.jpg";
@@ -14,10 +13,18 @@ import imgSass from "../assets/herramientas/sass.webp";
 import imgDjango from "../assets/herramientas/django.webp";
 import imgRailway from "../assets/herramientas/railway.webp";
 import imgVercel from "../assets/herramientas/vercel.webp";
+import veterinaria from "../assets/portafolio/veterinaria.png";
+import imgvite from "../assets/portafolio/vite.png";
+import imgtailwind from "../assets/portafolio/tailwind.png";
+import miskilla from "../assets/portafolio/miskilla.png";
+import imgnextjs from "../assets/portafolio/imgnextjs.png";
+import imgtypescript from "../assets/portafolio/imgtypescript.png";
 
 const Projects = () => {
   const [estadoModal1, setestadoModal1] = useState(false);
   const [estadoModal2, setestadoModal2] = useState(false);
+  const [estadoModal3, setestadoModal3] = useState(false);
+  const [estadoModal6, setestadoModal6] = useState(false);
   const project = [
     {
       id: 1,
@@ -29,33 +36,35 @@ const Projects = () => {
     },
     {
       id: 2,
-      src: installNode,
-      alte: "proyecto construyendose",
+      src: veterinaria,
+      cde: "https://github.com/haroldevs/citas-react",
+      alte: "mini proyecto veterinaria",
       themodal: () => setestadoModal2(!estadoModal2),
     },
     {
       id: 3,
-      src: navbar,
-      alte: "proyecto construyendose",
-      themodal: () => setestadoModal2(!estadoModal2),
+      src: miskilla,
+      cde: "https://github.com/haroldevs/demos/blob/main/README.md",
+      alte: "proyecto Miski killa travel",
+      themodal: () => setestadoModal3(!estadoModal3),
     },
     {
       id: 4,
       src: reactParallax,
       alte: "proyecto construyendose",
-      themodal: () => setestadoModal2(!estadoModal2),
+      themodal: () => setestadoModal6(!estadoModal6),
     },
     {
       id: 5,
       src: reactSmooth,
       alte: "proyecto construyendose",
-      themodal: () => setestadoModal2(!estadoModal2),
+      themodal: () => setestadoModal6(!estadoModal6),
     },
     {
       id: 6,
       src: reactWeather,
       alte: "proyecto construyendose",
-      themodal: () => setestadoModal2(!estadoModal2),
+      themodal: () => setestadoModal6(!estadoModal6),
     },
   ];
   return (
@@ -71,10 +80,11 @@ const Projects = () => {
         <div className="grid sm:gridcols-2 md:grid-cols-3 gap-8 px-12 sm:px-20">
           {project.map(({ id, src, lnk, cde, alte, themodal }) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
+              {/* img 1280 x 720 */}
               <img
                 src={src}
                 alt={alte}
-                className="rounded-md duration-200 hover:scale-105"
+                className="rounded-md duration-200 hover:scale-105  "
                 onClick={themodal}
               />
               <div className="flex items-center justify-center">
@@ -175,13 +185,94 @@ const Projects = () => {
       <ModalProjects
         estado={estadoModal2}
         cambiarEstado={setestadoModal2}
+        titulo={"Mini Proyecto Citas Veterinaria LocalStorage"}
+        mostrarOverlay={true}
+        posicionModal={"center"}
+      >
+        <Contenido>
+          <p>Proyecto hecho con Vite + Tailwind</p>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+              gap: "2rem",
+            }}
+          >
+            <div>
+              <TitleInfo>Front-End</TitleInfo>
+              <ul>
+                <li>
+                  <CuadroInfo>
+                    <img src={imgvite} alt="Vite"></img>Vite
+                  </CuadroInfo>
+                </li>
+                <li>
+                  <CuadroInfo>
+                    <img src={imgtailwind} alt="Tailwind"></img>
+                    Tailwind
+                  </CuadroInfo>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <Boton onClick={() => setestadoModal2(!estadoModal2)}>Volver</Boton>
+        </Contenido>
+      </ModalProjects>
+      {/* modal del proyecto 3 */}
+      <ModalProjects
+        estado={estadoModal3}
+        cambiarEstado={setestadoModal3}
+        titulo={"Proyecto Miski Killa Travel"}
+        mostrarOverlay={true}
+        posicionModal={"center"}
+      >
+        <Contenido>
+          <p>Proyecto haciendose con NextJS + Typescript + Tailwind</p>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+              gap: "2rem",
+            }}
+          >
+            <div>
+              <TitleInfo>Front-End</TitleInfo>
+              <ul>
+                <li>
+                  <CuadroInfo>
+                    <img src={imgnextjs} alt="Nextjs"></img>Nextjs
+                  </CuadroInfo>
+                </li>
+                <li>
+                  <CuadroInfo>
+                    <img src={imgtypescript} alt="TypeScript"></img>TypeScript
+                  </CuadroInfo>
+                </li>
+                <li>
+                  <CuadroInfo>
+                    <img src={imgtailwind} alt="Tailwind"></img>
+                    Tailwind
+                  </CuadroInfo>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <Boton onClick={() => setestadoModal3(!estadoModal3)}>Volver</Boton>
+        </Contenido>
+      </ModalProjects>
+      {/* modal del proyecto 6 */}
+      <ModalProjects
+        estado={estadoModal6}
+        cambiarEstado={setestadoModal6}
         titulo={"Proyecto Construyendose "}
         mostrarOverlay={true}
         posicionModal={"start"}
       >
         <Contenido>
           <p>Proyecto en construcción 👷 💻 💪 </p>
-          <Boton onClick={() => setestadoModal2(!estadoModal2)}>Volver</Boton>
+          <Boton onClick={() => setestadoModal6(!estadoModal6)}>Volver</Boton>
         </Contenido>
       </ModalProjects>
     </div>
