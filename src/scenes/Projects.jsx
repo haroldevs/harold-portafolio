@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import navbar from "../assets/portafolio/arrayDestruct.jpg";
 import reactParallax from "../assets/portafolio/reactParallax.jpg";
 import reactSmooth from "../assets/portafolio/reactSmooth.jpg";
 import reactWeather from "../assets/portafolio/reactWeather.jpg";
