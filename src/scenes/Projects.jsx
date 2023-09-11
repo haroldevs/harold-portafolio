@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import reactParallax from "../assets/portafolio/reactParallax.jpg";
-import reactSmooth from "../assets/portafolio/reactSmooth.jpg";
 import reactWeather from "../assets/portafolio/reactWeather.jpg";
 import delupeimg from "../assets/portafolio/delupeimg.jpg";
 import ModalProjects from "../components/ModalProjects";
@@ -18,11 +16,15 @@ import imgtailwind from "../assets/portafolio/tailwind.png";
 import miskilla from "../assets/portafolio/miskilla.png";
 import imgnextjs from "../assets/portafolio/imgnextjs.png";
 import imgtypescript from "../assets/portafolio/imgtypescript.png";
+import compuusa from "../assets/portafolio/compuusa.webp";
+import control_de_gastos from "../assets/portafolio/gastos.webp";
 
 const Projects = () => {
   const [estadoModal1, setestadoModal1] = useState(false);
   const [estadoModal2, setestadoModal2] = useState(false);
   const [estadoModal3, setestadoModal3] = useState(false);
+  const [estadoModal4, setestadoModal4] = useState(false);
+  const [estadoModal5, setestadoModal5] = useState(false);
   const [estadoModal6, setestadoModal6] = useState(false);
   const project = [
     {
@@ -36,6 +38,7 @@ const Projects = () => {
     {
       id: 2,
       src: veterinaria,
+      lnk: "https://main--citas-mascota.netlify.app/",
       cde: "https://github.com/haroldevs/citas-react",
       alte: "mini proyecto veterinaria",
       themodal: () => setestadoModal2(!estadoModal2),
@@ -43,21 +46,26 @@ const Projects = () => {
     {
       id: 3,
       src: miskilla,
+      lnk: "https://miskikillatravel.com/",
       cde: "https://github.com/haroldevs/demos/blob/main/README.md",
       alte: "proyecto Miski killa travel",
       themodal: () => setestadoModal3(!estadoModal3),
     },
     {
       id: 4,
-      src: reactParallax,
-      alte: "proyecto construyendose",
-      themodal: () => setestadoModal6(!estadoModal6),
+      src: compuusa,
+      lnk: "https://tienda.compuusa.com.pe/",
+      cde: "https://github.com/haroldevs/demos/blob/main/README.md",
+      alte: "proyecto Compuusa",
+      themodal: () => setestadoModal4(!estadoModal4),
     },
     {
       id: 5,
-      src: reactSmooth,
-      alte: "proyecto construyendose",
-      themodal: () => setestadoModal6(!estadoModal6),
+      src: control_de_gastos,
+      lnk: "https://main--control-de-presupuesto-y-gasto.netlify.app/",
+      cde: "https://github.com/haroldevs/control-gastos",
+      alte: "mini proyecto de control de gastos",
+      themodal: () => setestadoModal5(!estadoModal5),
     },
     {
       id: 6,
@@ -252,6 +260,81 @@ const Projects = () => {
                   <CuadroInfo>
                     <img src={imgtailwind} alt="Tailwind"></img>
                     Tailwind
+                  </CuadroInfo>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <Boton onClick={() => setestadoModal3(!estadoModal3)}>Volver</Boton>
+        </Contenido>
+      </ModalProjects>
+      {/* modal del proyecto 4 */}
+      <ModalProjects
+        estado={estadoModal4}
+        cambiarEstado={setestadoModal4}
+        titulo={"Proyecto Compuusa"}
+        mostrarOverlay={true}
+        posicionModal={"center"}
+      >
+        <Contenido>
+          <p>Proyecto haciendose con NextJS + Typescript + Tailwind</p>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+              gap: "2rem",
+            }}
+          >
+            <div>
+              <TitleInfo>Front-End</TitleInfo>
+              <ul>
+                <li>
+                  <CuadroInfo>
+                    <img src={imgnextjs} alt="Nextjs"></img>Nextjs
+                  </CuadroInfo>
+                </li>
+                <li>
+                  <CuadroInfo>
+                    <img src={imgtypescript} alt="TypeScript"></img>TypeScript
+                  </CuadroInfo>
+                </li>
+                <li>
+                  <CuadroInfo>
+                    <img src={imgtailwind} alt="Tailwind"></img>
+                    Tailwind
+                  </CuadroInfo>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <Boton onClick={() => setestadoModal3(!estadoModal3)}>Volver</Boton>
+        </Contenido>
+      </ModalProjects>
+      {/* modal del proyecto 5 */}
+      <ModalProjects
+        estado={estadoModal5}
+        cambiarEstado={setestadoModal5}
+        titulo={"Mini Proyecto de Control de Gastos"}
+        mostrarOverlay={true}
+        posicionModal={"center"}
+      >
+        <Contenido>
+          <p>Proyecto haciendose con React</p>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+              gap: "2rem",
+            }}
+          >
+            <div>
+              <TitleInfo>Front-End</TitleInfo>
+              <ul>
+                <li>
+                  <CuadroInfo>
+                    <img src={imgReact} alt="React"></img>React
                   </CuadroInfo>
                 </li>
               </ul>
