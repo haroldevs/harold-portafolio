@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import reactWeather from "../assets/portafolio/reactWeather.jpg";
 import delupeimg from "../assets/portafolio/delupeimg.jpg";
 import ModalProjects from "../components/ModalProjects";
 import imgReact from "../assets/herramientas/react.webp";
