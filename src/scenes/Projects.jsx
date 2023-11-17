@@ -18,7 +18,9 @@ import imgnextjs from "../assets/portafolio/imgnextjs.png";
 import imgtypescript from "../assets/portafolio/imgtypescript.png";
 import compuusa from "../assets/portafolio/compuusa.webp";
 import control_de_gastos from "../assets/portafolio/gastos.webp";
-
+import cotizadorCriptos from "../assets/portafolio/cotizadorCriptos.PNG";
+import crmCliente from "../assets/portafolio/crmCliente.PNG";
+import rrdv6 from "../assets/portafolio/rrdv6.png";
 const Projects = () => {
   const [estadoModal1, setestadoModal1] = useState(false);
   const [estadoModal2, setestadoModal2] = useState(false);
@@ -26,6 +28,7 @@ const Projects = () => {
   const [estadoModal4, setestadoModal4] = useState(false);
   const [estadoModal5, setestadoModal5] = useState(false);
   const [estadoModal6, setestadoModal6] = useState(false);
+  const [estadoModal7, setestadoModal7] = useState(false);
   const project = [
     {
       id: 1,
@@ -69,13 +72,23 @@ const Projects = () => {
     },
     {
       id: 6,
-      src: reactWeather,
-      alte: "proyecto construyendose",
+      src: cotizadorCriptos,
+      lnk: "https://cotizador-de-criptos-con-soles.netlify.app/",
+      cde: "https://github.com/haroldevs/criptos-react",
+      alte: "mini proyecto de criptos",
       themodal: () => setestadoModal6(!estadoModal6),
+    },
+    {
+      id: 7,
+      src: crmCliente,
+      lnk: "https://crmclientetoview.netlify.app/",
+      cde: "F",
+      alte: "mini proyecto de crm clientes",
+      themodal: () => setestadoModal7(!estadoModal7),
     },
   ];
   return (
-    <div id="projects" className="pt-48 pb-48 md:h-screen ">
+    <div id="projects" className="pt-48 pb-48 mb-64 md:h-screen ">
       <div className="max-w-screen-lg p-4  mx-auto flex flex-col justify-center w-full ">
         <div className="pb-8 text-center">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500 ">
@@ -91,7 +104,7 @@ const Projects = () => {
               <img
                 src={src}
                 alt={alte}
-                className="rounded-md duration-200 hover:scale-105  "
+                className="rounded-md duration-200 hover:scale-105   "
                 onClick={themodal}
               />
               <div className="flex items-center justify-center">
@@ -213,12 +226,6 @@ const Projects = () => {
                     <img src={imgvite} alt="Vite"></img>Vite
                   </CuadroInfo>
                 </li>
-                <li>
-                  <CuadroInfo>
-                    <img src={imgtailwind} alt="Tailwind"></img>
-                    Tailwind
-                  </CuadroInfo>
-                </li>
               </ul>
             </div>
           </div>
@@ -309,7 +316,7 @@ const Projects = () => {
             </div>
           </div>
 
-          <Boton onClick={() => setestadoModal3(!estadoModal3)}>Volver</Boton>
+          <Boton onClick={() => setestadoModal4(!estadoModal4)}>Volver</Boton>
         </Contenido>
       </ModalProjects>
       {/* modal del proyecto 5 */}
@@ -337,24 +344,97 @@ const Projects = () => {
                     <img src={imgReact} alt="React"></img>React
                   </CuadroInfo>
                 </li>
+                <li>
+                  <CuadroInfo>
+                    <img src={imgtailwind} alt="Tailwind"></img>
+                    Tailwind
+                  </CuadroInfo>
+                </li>
               </ul>
             </div>
           </div>
 
-          <Boton onClick={() => setestadoModal3(!estadoModal3)}>Volver</Boton>
+          <Boton onClick={() => setestadoModal5(!estadoModal5)}>Volver</Boton>
         </Contenido>
       </ModalProjects>
       {/* modal del proyecto 6 */}
       <ModalProjects
         estado={estadoModal6}
         cambiarEstado={setestadoModal6}
-        titulo={"Proyecto Construyendose "}
+        titulo={"Mini Proyecto de Criptos value"}
         mostrarOverlay={true}
-        posicionModal={"start"}
+        posicionModal={"center"}
       >
         <Contenido>
-          <p>Proyecto en construcción 👷 💻 💪 </p>
+          <p>Proyecto haciendose con React</p>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+              gap: "2rem",
+            }}
+          >
+            <div>
+              <TitleInfo>Front-End</TitleInfo>
+              <ul>
+                <li>
+                  <CuadroInfo>
+                    <img src={imgReact} alt="React"></img>React
+                  </CuadroInfo>
+                </li>
+              </ul>
+            </div>
+          </div>
+
           <Boton onClick={() => setestadoModal6(!estadoModal6)}>Volver</Boton>
+        </Contenido>
+      </ModalProjects>
+      {/* modal del proyecto 7 */}
+      <ModalProjects
+        estado={estadoModal7}
+        cambiarEstado={setestadoModal7}
+        titulo={"Mini Proyecto de CRM - Clientes"}
+        mostrarOverlay={true}
+        posicionModal={"center"}
+      >
+        <Contenido>
+          <p>Proyecto haciendose con React + Tailwind + React Router Dom v6</p>
+          <p>
+            Para ejecutar este proyecto debe instalar json-server usar archivo
+            db.json para su fake api - rest
+          </p>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+              gap: "2rem",
+            }}
+          >
+            <div>
+              <TitleInfo>Front-End</TitleInfo>
+              <ul>
+                <li>
+                  <CuadroInfo>
+                    <img src={imgReact} alt="React"></img>React
+                  </CuadroInfo>
+                </li>
+                <li>
+                  <CuadroInfo>
+                    <img src={imgtailwind} alt="Tailwind"></img>
+                    Tailwind
+                  </CuadroInfo>
+                </li>
+                <li>
+                  <CuadroInfo>
+                    <img src={rrdv6} alt="React Router Dom v6"></img>
+                    React Router Dom v6
+                  </CuadroInfo>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <Boton onClick={() => setestadoModal7(!estadoModal7)}>Volver</Boton>
         </Contenido>
       </ModalProjects>
     </div>
